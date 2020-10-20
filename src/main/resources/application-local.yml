@@ -1,0 +1,17 @@
+spring:
+  profiles: local
+  r2dbc:
+    username: root
+    password: sa
+    url: r2dbc:postgresql://localhost:5432/postgres?schema=test_db
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/postgres
+    user: root
+    password: sa
+    schemas: test_db
+  jpa:
+    show-sql: true
+    database: postgresql
+#    hibernate:
+#      ddl-auto: validate
